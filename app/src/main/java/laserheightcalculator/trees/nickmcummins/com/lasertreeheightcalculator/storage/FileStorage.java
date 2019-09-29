@@ -22,7 +22,7 @@ public class FileStorage {
             double distanceToBase,
             double calculatedHeight)
     {
-        String dateString = new SimpleDateFormat("EEE MMM dd hh:mm:ss yyyy").format(new Date());
+        String dateString = new SimpleDateFormat("EEE MMM dd hh:mm:ss yyyy", Locale.getDefault()).format(new Date());
         String line = String.format(Locale.getDefault(), "%s\t(%f,%f)\t%f\t%f,%f",
                 dateString, latitude, longitude, calculatedHeight, distanceToBase, distanceToHeight);
         writeToFile(line);

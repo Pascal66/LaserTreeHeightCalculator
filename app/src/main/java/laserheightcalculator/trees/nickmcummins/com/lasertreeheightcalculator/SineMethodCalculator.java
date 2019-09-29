@@ -90,7 +90,7 @@ public class SineMethodCalculator extends AppCompatActivity {
                         angleToHeightNumeric,
                         distanceToBottomNumeric,
                         angleToBottomNumeric);
-                FileStorage.writeToFile(String.valueOf(calculatedHeightNumeric) + "\n");
+                FileStorage.writeToFile(calculatedHeightNumeric + "\n");
                 calculatedHeight.setText(String.format("%s %s",
                         calculatedHeightNumeric, DEFAULT_UNITS));
 
@@ -118,11 +118,11 @@ public class SineMethodCalculator extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.switch_mode) {
-            Intent intent = new Intent(this, TangentMethodCalculator.class);
-            startActivity(intent);
-            return true;
+        switch (id) {
+            case R.id.switch_mode:
+                Intent intent = new Intent(this, TangentMethodCalculator.class);
+                startActivity(intent);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

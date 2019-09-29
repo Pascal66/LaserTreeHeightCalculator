@@ -81,7 +81,7 @@ public class TangentMethodCalculator extends AppCompatActivity {
                 distanceToBaseNumeric = parseEditText(distanceToBase, unitsToBase);
 
                 calculatedHeightNumeric = calculateHeight(distanceToHeightNumeric, distanceToBaseNumeric);
-                FileStorage.writeToFile(String.valueOf(calculatedHeightNumeric) + "\n");
+                FileStorage.writeToFile(calculatedHeightNumeric + "\n");
                 calculatedHeight.setText(String.format("%s %s",
                         calculatedHeightNumeric, DEFAULT_UNITS));
 
@@ -109,11 +109,11 @@ public class TangentMethodCalculator extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.switch_mode) {
-            Intent intent = new Intent(this, SineMethodCalculator.class);
-            startActivity(intent);
-            return true;
+        switch (id) {
+            case R.id.switch_mode:
+                Intent intent = new Intent(this, SineMethodCalculator.class);
+                startActivity(intent);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

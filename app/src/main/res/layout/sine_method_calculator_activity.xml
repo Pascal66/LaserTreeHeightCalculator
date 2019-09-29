@@ -32,14 +32,14 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/angleToTop"
         android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:layout_alignBaseline="@+id/distanceToTop"
         android:layout_toRightOf="@id/distanceToTop"
         android:inputType="numberDecimal" />
@@ -51,7 +51,7 @@
         android:layout_below="@+id/distanceToTop"
         android:layout_marginStart="200dp"
         android:layout_marginTop="75dp"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:inputType="numberDecimal" />
 
     <Spinner
@@ -67,7 +67,7 @@
         android:layout_width="30dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/distanceToBottom"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:layout_toRightOf="@id/unitsToBottom"
         android:inputType="numberDecimal" />
 
@@ -79,7 +79,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
         android:text="@string/the_height_of_the_tree_is"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/calculatedHeight"
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/calculatedHeightLabel"
         android:layout_centerHorizontal="true"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
     <TextView
@@ -97,7 +97,7 @@
         android:layout_below="@+id/calculatedHeight"
         android:layout_centerHorizontal="true"
         android:text="@string/coordinates"
-        android:textSize="14dp" />
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/calculateHeightButton"
